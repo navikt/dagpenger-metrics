@@ -11,6 +11,7 @@ fun aCounter(name: String, labelNames: List<String> = listOf(), help: String): C
     return Counter
         .build()
         .namespace(DAGPENGER_NAMESPACE)
+        .name(name)
         .help(help)
         .labelNames(*labelNames.toTypedArray())
         .register()
@@ -20,6 +21,7 @@ fun aGauge(name: String, labelNames: List<String> = listOf(), help: String): Gau
     return Gauge
         .build()
         .namespace(DAGPENGER_NAMESPACE)
+        .name(name)
         .help(help)
         .labelNames(*labelNames.toTypedArray())
         .register()
@@ -29,6 +31,7 @@ fun aSummary(name: String, labelNames: List<String> = listOf(), help: String): S
     return Summary
         .build()
         .namespace(DAGPENGER_NAMESPACE)
+        .name(name)
         .help(help)
         .labelNames(*labelNames.toTypedArray())
         .register()
@@ -38,6 +41,7 @@ fun aHistogram(name: String, labelNames: List<String> = listOf(), help: String):
     return Histogram
         .build()
         .namespace(DAGPENGER_NAMESPACE)
+        .name(name)
         .help(help)
         .labelNames(*labelNames.toTypedArray())
         .register()
