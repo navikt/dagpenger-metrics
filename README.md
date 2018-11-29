@@ -1,5 +1,5 @@
 # DAGPENGER-METRICS
-Common prometheus configuration for dagpenger.
+Et lite bibliotek som tilbyr [prometheus-metrikker](https://prometheus.io/docs/concepts/metric_types/) med dagpenger-spesifikk konfigurasjon lagt på.
 
 # Komme i gang
 
