@@ -32,7 +32,7 @@ tasks.withType<KotlinCompile> {
 }
 
 group = "no.nav.dagpenger"
-version = "0.1.0-SNAPSHOT"
+version = "0.1.1-SNAPSHOT"
 
 val kotlinLoggingVersion = "1.4.9"
 val prometheusVersion = "0.5.0"
