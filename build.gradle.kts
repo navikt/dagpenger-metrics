@@ -1,8 +1,8 @@
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+
 
 plugins {
     id("java-library")
-    kotlin("jvm") version "1.3.10"
+    kotlin("jvm") version "1.3.11"
     id("com.diffplug.gradle.spotless") version "3.13.0"
     id("maven-publish")
     id("signing")
@@ -22,32 +22,17 @@ repositories {
     maven("https://oss.sonatype.org/content/repositories/snapshots/")
 }
 
-//java {
-//    sourceCompatibility = JavaVersion.VERSION_1_8
-//    targetCompatibility = JavaVersion.VERSION_1_8
-//}
-
-tasks.withType<KotlinCompile> {
-    kotlinOptions.jvmTarget = "1.8"
-}
-
 group = "no.nav.dagpenger"
-version = "0.1.1-SNAPSHOT"
+version = "1.0-SNAPSHOT"
 
 val kotlinLoggingVersion = "1.4.9"
-val prometheusVersion = "0.5.0"
+val prometheusVersion = "0.6.0"
 
 dependencies {
     implementation(kotlin("stdlib"))
 
     api("io.prometheus:simpleclient_common:$prometheusVersion")
     api("io.prometheus:simpleclient_hotspot:$prometheusVersion")
-
-    implementation("io.github.microutils:kotlin-logging:$kotlinLoggingVersion")
-
-    testImplementation(kotlin("test"))
-    testImplementation(kotlin("test-junit"))
-    testImplementation("junit:junit:4.12")
 }
 
 val sourcesJar by tasks.registering(Jar::class) {
